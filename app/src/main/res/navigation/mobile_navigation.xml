@@ -12,14 +12,25 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.iee.trvl.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_offices"
+        android:name="com.iee.trvl.ui.offices.OfficesFragment"
+        android:label="@string/menu_offices"
+        tools:layout="@layout/fragment_offices" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.iee.trvl.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_tours"
+        android:name="com.iee.trvl.ui.tours.ToursFragment"
+        android:label="@string/menu_tours"
+        tools:layout="@layout/fragment_tours" />
+
+    <fragment
+        android:id="@+id/nav_packages"
+        android:name="com.iee.trvl.ui.packages.PackagesFragment"
+        android:label="@string/menu_packages"
+        tools:layout="@layout/fragment_packages" />
+    <fragment
+        android:id="@+id/nav_costumers"
+        android:name="com.iee.trvl.ui.costumers.CostumersFragment"
+        android:label="@string/menu_costumers"
+        tools:layout="@layout/fragment_costumers" />
 </navigation>

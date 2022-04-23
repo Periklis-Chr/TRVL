@@ -8,6 +8,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Tours</string>
-    <string name="menu_slideshow">Travel Packages</string>
+    <string name="menu_offices">Offices</string>
+    <string name="menu_tours">Tours</string>
+    <string name="menu_packages">Travel Packages</string>
+    <string name="menu_costumers">Costumers</string>
 </resources>
