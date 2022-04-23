@@ -1,2 +1,2 @@
 # TRVL
-<img src="/preview/appDemo.PNG">
+<img src="/appDemo.PNG">
