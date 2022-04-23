@@ -22,14 +22,14 @@ class PackagesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
+        val packagesViewModel =
             ViewModelProvider(this).get(PackagesViewModel::class.java)
 
         _binding = FragmentPackagesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textPackages
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        packagesViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

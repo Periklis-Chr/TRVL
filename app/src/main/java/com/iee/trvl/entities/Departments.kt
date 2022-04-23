@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName="Departments_table")
 data class Departments(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val Did: Int,
     val Name: String,
     val Address: String

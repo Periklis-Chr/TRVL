@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.iee.trvl.databinding.FragmentHomeBinding
+import androidx.navigation.Navigation
+import androidx.navigation.R
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.iee.trvl.databinding.FragmentOfficesBinding
-import com.iee.trvl.ui.home.HomeViewModel
+
 
 
 class OfficesFragment : Fragment() {
@@ -25,16 +28,25 @@ class OfficesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
+
+
+        val officesViewModel =
             ViewModelProvider(this).get(OfficesViewModel::class.java)
 
         _binding = FragmentOfficesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+
+
+
         val textView: TextView = binding.textOffices
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        officesViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+
+
         }
+
+
         return root
     }
 

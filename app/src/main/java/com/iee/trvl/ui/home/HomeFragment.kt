@@ -30,7 +30,8 @@ class HomeFragment : Fragment() {
 
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            textView.text = "Our services cover all aspects of your travel needs ensuring that your Mediterranean holiday will be one to remember.\n" +
+                            "With TRVL , you are assured of quality and reliability.\n"
         }
         return root
     }
@@ -39,4 +40,10 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+
+
+
+
 }

@@ -7,7 +7,7 @@ import java.sql.Time
 
 @Entity(tableName = "Packages_table")
 data class Packages (
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val Pid: Int,
     val Did: Int,
     val Tid: Int,

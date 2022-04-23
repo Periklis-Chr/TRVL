@@ -7,7 +7,7 @@ import java.sql.Time
 
 @Entity(tableName = "Tours_table")
 data class Tours (
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val Tid: Int,
     val City: String,
     val Country: String,

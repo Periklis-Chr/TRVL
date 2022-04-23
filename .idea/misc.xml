@@ -6,21 +6,27 @@
         <entry key="..\:/github projects/TRVL/app/src/main/res/drawable/ic_menu_camera.xml" value="0.532" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.532" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/drawable/side_nav_bar.xml" value="0.4185" />
-        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/activity_main.xml" value="0.22113022113022113" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/layout/app_bar_main.xml" value="0.5541666666666667" />
-        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/content_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_add_offices.xml" value="0.3645833333333333" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_costumers.xml" value="0.37771739130434784" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_gallery.xml" value="0.5541666666666667" />
-        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_home.xml" value="0.5541666666666667" />
-        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_offices.xml" value="0.37771739130434784" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_home.xml" value="0.2087227414330218" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_offices.xml" value="0.1" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_offices_add.xml" value="0.32608695652173914" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_packages.xml" value="0.3677536231884058" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_slideshow.xml" value="0.5541666666666667" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/layout/fragment_tours.xml" value="0.37771739130434784" />
-        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/nav_header_main.xml" value="0.5245009074410163" />
+        <entry key="..\:/github projects/TRVL/app/src/main/res/layout/nav_header_main.xml" value="0.1724137931034483" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/menu/activity_main_drawer.xml" value="0.5541666666666667" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/menu/main.xml" value="0.5541666666666667" />
         <entry key="..\:/github projects/TRVL/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.4185" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_add_offices.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
