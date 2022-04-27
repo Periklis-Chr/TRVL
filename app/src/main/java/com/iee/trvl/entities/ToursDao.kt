@@ -8,7 +8,7 @@ interface ToursDao {
 
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addDepartment(tour: Tours)
+    fun addTours(tour: Tours)
 
     @Delete
     fun deleteDTours(tour: Tours)
@@ -17,7 +17,7 @@ interface ToursDao {
     fun updateTours(tour: Tours)
 
     @Query("SELECT * FROM Tours_table")
-    fun readData(): LiveData<List<Tours>>
+    fun readTours(): LiveData<List<Tours>>
 
 
 

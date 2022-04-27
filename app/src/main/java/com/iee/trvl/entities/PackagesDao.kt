@@ -8,7 +8,7 @@ interface PackagesDao {
 
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addDepartment(packages: Packages)
+    fun addPackages(packages: Packages)
 
     @Delete
     fun deleteDPackages(packages: Packages)
