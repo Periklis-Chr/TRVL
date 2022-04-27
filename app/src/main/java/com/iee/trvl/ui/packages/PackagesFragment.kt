@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.iee.trvl.R
 import com.iee.trvl.databinding.FragmentPackagesBinding
 
 class PackagesFragment : Fragment() {
@@ -32,6 +34,17 @@ class PackagesFragment : Fragment() {
         packagesViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+
+
+        binding.floatingActionButtonaddPackages.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_packages_to_addPackagesFragment)
+        }
+
+
+
+
+
         return root
     }
 

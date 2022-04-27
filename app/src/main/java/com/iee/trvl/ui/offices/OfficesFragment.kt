@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import androidx.navigation.R
+import com.iee.trvl.R
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import com.iee.trvl.databinding.FragmentOfficesBinding
 
@@ -18,6 +20,7 @@ import com.iee.trvl.databinding.FragmentOfficesBinding
 class OfficesFragment : Fragment() {
 
     private var _binding: FragmentOfficesBinding? = null
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -38,13 +41,19 @@ class OfficesFragment : Fragment() {
 
 
 
-
         val textView: TextView = binding.textOffices
         officesViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
 
 
         }
+
+
+        binding.floatingActionButtonAddOffice.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_offices_to_addOffices)
+        }
+
+
 
 
         return root

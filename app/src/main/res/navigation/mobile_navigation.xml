@@ -15,22 +15,61 @@
         android:id="@+id/nav_offices"
         android:name="com.iee.trvl.ui.offices.OfficesFragment"
         android:label="@string/menu_offices"
-        tools:layout="@layout/fragment_offices" />
+        tools:layout="@layout/fragment_offices" >
+        <action
+            android:id="@+id/action_nav_offices_to_addOffices"
+            app:destination="@id/addOffices" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_tours"
         android:name="com.iee.trvl.ui.tours.ToursFragment"
         android:label="@string/menu_tours"
-        tools:layout="@layout/fragment_tours" />
+        tools:layout="@layout/fragment_tours" >
+        <action
+            android:id="@+id/action_nav_tours_to_addToursFragment"
+            app:destination="@id/addToursFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_packages"
         android:name="com.iee.trvl.ui.packages.PackagesFragment"
         android:label="@string/menu_packages"
-        tools:layout="@layout/fragment_packages" />
+        tools:layout="@layout/fragment_packages" >
+        <action
+            android:id="@+id/action_nav_packages_to_addPackagesFragment"
+            app:destination="@id/addPackagesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_costumers"
         android:name="com.iee.trvl.ui.costumers.CostumersFragment"
         android:label="@string/menu_costumers"
         tools:layout="@layout/fragment_costumers" />
+    <fragment
+        android:id="@+id/addOffices"
+        android:name="com.iee.trvl.ui.offices.editOfficesOptions.addOffices"
+        android:label="Add Offices"
+        tools:layout="@layout/fragment_add_offices" >
+        <action
+            android:id="@+id/action_addOffices_to_nav_offices"
+            app:destination="@id/nav_offices" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPackagesFragment"
+        android:name="com.iee.trvl.ui.packages.editPackagesOptions.addPackagesFragment"
+        android:label="Add Travel Packages"
+        tools:layout="@layout/fragment_add_packages" >
+        <action
+            android:id="@+id/action_addPackagesFragment_to_nav_packages"
+            app:destination="@id/nav_packages" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToursFragment"
+        android:name="com.iee.trvl.ui.tours.editToursOptions.addToursFragment"
+        android:label="Add Tours"
+        tools:layout="@layout/fragment_add_tours" >
+        <action
+            android:id="@+id/action_addToursFragment_to_nav_tours"
+            app:destination="@id/nav_tours" />
+    </fragment>
 </navigation>

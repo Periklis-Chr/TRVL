@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.iee.trvl.R
 import com.iee.trvl.databinding.FragmentToursBinding
 
 class ToursFragment : Fragment() {
@@ -32,6 +34,17 @@ class ToursFragment : Fragment() {
         toursViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+
+        binding.floatingActionButtonaddTours.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_tours_to_addToursFragment)
+        }
+
+
+
+
+
+
         return root
     }
 
