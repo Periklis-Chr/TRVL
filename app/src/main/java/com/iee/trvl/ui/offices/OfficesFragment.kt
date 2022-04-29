@@ -33,29 +33,26 @@ class OfficesFragment : Fragment() {
     ): View {
 
 
-        val officesViewModel =
-            ViewModelProvider(this).get(OfficesViewModel::class.java)
+//        val officesViewModel =
+//            ViewModelProvider(this).get(OfficesViewModel::class.java)
 
         _binding = FragmentOfficesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 
 
-        val textView: TextView = binding.textOffices
-        officesViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-
-
-        }
+//        val textView: TextView = binding.textOffices
+//        officesViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//
+//
+//        }
 
 
         binding.floatingActionButtonAddOffice.setOnClickListener {
             findNavController().navigate(R.id.action_nav_offices_to_addOffices)
         }
 
-
-        val asc = Array(5) { i -> (i * i).toString() }
-        asc.forEach { println(it) }
 
 
 

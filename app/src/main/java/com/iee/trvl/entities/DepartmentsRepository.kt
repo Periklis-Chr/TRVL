@@ -9,7 +9,7 @@ class DepartmentsRepository(private val departmentsDao:DepartmentsDao) {
 
     val readDepartmentData: LiveData<List<Departments>> = departmentsDao.readDepartments()
 
-    fun addDepartment(departments: Departments){
+    suspend fun addDepartment(departments: Departments){
         departmentsDao.addDepartment(departments)
     }
 
