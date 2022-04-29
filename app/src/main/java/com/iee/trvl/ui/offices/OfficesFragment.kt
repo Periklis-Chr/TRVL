@@ -54,6 +54,9 @@ class OfficesFragment : Fragment() {
         }
 
 
+        val asc = Array(5) { i -> (i * i).toString() }
+        asc.forEach { println(it) }
+
 
 
         return root

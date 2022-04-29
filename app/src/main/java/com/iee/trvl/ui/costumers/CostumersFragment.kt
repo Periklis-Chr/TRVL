@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.iee.trvl.R
 import com.iee.trvl.databinding.FragmentCostumersBinding
 
 class CostumersFragment : Fragment() {
@@ -33,6 +35,15 @@ class CostumersFragment : Fragment() {
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+
+        binding.floatingActionButtonAddCostumers.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_costumers_to_addCostumersFragment)
+        }
+
+
+
+
         return root
     }
 
