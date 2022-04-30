@@ -8,7 +8,7 @@ import androidx.room.*
 interface DepartmentsDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addDepartment(department: Departments)
+    suspend fun addDepartment(department: Departments)
 
     @Delete
     fun deleteDepartment(department: Departments)

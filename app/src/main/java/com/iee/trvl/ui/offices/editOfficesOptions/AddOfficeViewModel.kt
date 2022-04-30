@@ -13,17 +13,17 @@ import kotlinx.coroutines.launch
 class AddOfficeViewModel (application: Application) : AndroidViewModel(application){
 
 
+    private val readDepartmentData: LiveData<List<Departments>>
 
-    private val readData: LiveData<List<Departments>>
     private val repository: DepartmentsRepository
 
 
 
 
     init {
-        val officeDao= TrvlDatabase.getDatabase(application).DepartmentsDao()
+        val officeDao= TrvlDatabase.getDatabase(application).departmentsDao()
         repository = DepartmentsRepository(officeDao)
-        readData=repository.readDepartmentData
+        readDepartmentData=repository.readDepartmentData
     }
 
 
@@ -31,7 +31,10 @@ class AddOfficeViewModel (application: Application) : AndroidViewModel(applicati
     fun addOffice(departments: Departments){
         viewModelScope.launch(Dispatchers.IO){
             repository.addDepartment(departments)
+
+
         }
+
     }
 
 

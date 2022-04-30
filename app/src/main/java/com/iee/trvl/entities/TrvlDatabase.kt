@@ -10,9 +10,9 @@ import androidx.room.RoomDatabase
 abstract class TrvlDatabase:RoomDatabase() {
 
 
-    abstract fun DepartmentsDao(): DepartmentsDao
-    abstract fun ToursDao(): ToursDao
-    abstract fun PackagesDao(): PackagesDao
+    abstract fun departmentsDao(): DepartmentsDao
+    abstract fun toursDao(): ToursDao
+    abstract fun packagesDao(): PackagesDao
 
 
     companion object {
@@ -20,9 +20,9 @@ abstract class TrvlDatabase:RoomDatabase() {
         private var INSTANCE: TrvlDatabase? = null
 
         fun getDatabase(context: Context): TrvlDatabase {
-            val tempInsance = INSTANCE
-            if (tempInsance != null) {
-                return tempInsance
+            val tempInstance = INSTANCE
+            if (tempInstance != null) {
+                return tempInstance
             }
             synchronized(this) {
                 val instance = Room.databaseBuilder(

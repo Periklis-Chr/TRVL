@@ -13,7 +13,7 @@ import com.iee.trvl.databinding.FragmentAddOfficesBinding
 import com.iee.trvl.entities.Departments
 import com.iee.trvl.ui.offices.editOfficesOptions.AddOfficeViewModel
 import com.iee.trvl.R
-
+import com.iee.trvl.ui.offices.OfficesViewModel
 
 
 class AddOfficesFragment : Fragment() {
@@ -24,14 +24,14 @@ class AddOfficesFragment : Fragment() {
 
 
 
-private lateinit var officeViewModel: AddOfficeViewModel
-
+private lateinit var ViewModel: AddOfficeViewModel
 
 
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
@@ -40,10 +40,10 @@ private lateinit var officeViewModel: AddOfficeViewModel
         val root: View = binding.root
 
 
+//        ViewModel = ViewModelProvider(this).get(OfficesViewModel::class.java)
 
 
 
-//        officeViewModel = ViewModelProvider(this)[AddOfficeViewModel::class.java]
 
         binding.addOfficeSubmitBtn.setOnClickListener{
               insertOfficeData()
@@ -59,6 +59,10 @@ return root
 
 
 
+
+
+
+
     private fun insertOfficeData(){
 
        val code = binding.addofficeCode.text.toString()
@@ -66,11 +70,12 @@ return root
        val address=binding.addOfficeAdress.text.toString()
 
        if(inputCheck(code,name,address)){
-//          val office = Departments(Integer.parseInt(code),name,address)
-//
-//          officeViewModel.addOffice(office)
-          Toast.makeText(requireContext(),"Successfuly added!",Toast.LENGTH_LONG).show()
-//           findNavController().navigate(R.id.nav_offices)
+          val office = Departments(Integer.parseInt(code),name,address)
+
+//        ViewModel.addOffice(office)
+
+         Toast.makeText(requireContext(),"Successfully added!",Toast.LENGTH_LONG).show()
+          findNavController().navigate(R.id.nav_offices)
 
        }else{
          Toast.makeText(requireContext(),"Fill the input fields",Toast.LENGTH_LONG).show()
