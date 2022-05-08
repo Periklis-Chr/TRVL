@@ -25,14 +25,14 @@ class CostumersFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
+        val costumersViewModel =
             ViewModelProvider(this).get(CostumersViewModel::class.java)
 
         _binding = FragmentCostumersBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textCostumers
-        galleryViewModel.text.observe(viewLifecycleOwner) {
+        costumersViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 

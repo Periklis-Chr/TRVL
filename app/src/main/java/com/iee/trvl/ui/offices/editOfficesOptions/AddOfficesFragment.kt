@@ -11,20 +11,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.iee.trvl.databinding.FragmentAddOfficesBinding
 import com.iee.trvl.entities.Departments
-import com.iee.trvl.ui.offices.editOfficesOptions.AddOfficeViewModel
 import com.iee.trvl.R
-import com.iee.trvl.ui.offices.OfficesViewModel
 
 
 class AddOfficesFragment : Fragment() {
 
+    private  lateinit var addOfficeViewModel: AddOfficeViewModel
 
     private var _binding: FragmentAddOfficesBinding? = null
     private val binding get() = _binding!!
 
-
-
-private lateinit var ViewModel: AddOfficeViewModel
 
 
 
@@ -36,11 +32,13 @@ private lateinit var ViewModel: AddOfficeViewModel
     ): View? {
 
 
+        addOfficeViewModel = ViewModelProvider(this).get(AddOfficeViewModel::class.java)
+
         _binding = FragmentAddOfficesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 
-//        ViewModel = ViewModelProvider(this).get(OfficesViewModel::class.java)
+
 
 
 
@@ -71,10 +69,9 @@ return root
 
        if(inputCheck(code,name,address)){
           val office = Departments(Integer.parseInt(code),name,address)
+//           addOfficeViewModel.addOffice(office)
 
-//        ViewModel.addOffice(office)
-
-         Toast.makeText(requireContext(),"Successfully added!",Toast.LENGTH_LONG).show()
+         Toast.makeText(requireContext(),"success",Toast.LENGTH_LONG).show()
           findNavController().navigate(R.id.nav_offices)
 
        }else{
@@ -86,5 +83,14 @@ return root
     private fun inputCheck(code:String,name:String,address:String):Boolean{
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(address) && TextUtils.isEmpty(code))
   }
+
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }
